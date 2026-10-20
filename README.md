@@ -52,6 +52,8 @@ npm install        # or pnpm install / yarn install
    |------|------|
    | `DISCORD_TOKEN` | Discord Bot トークン |
    | `PREFIX` | メッセージコマンドのプレフィックス（デフォルト: `!`） |
+   | `DEPLOYMENT_FINGERPRINT` | デプロイメント指紋（任意） |
+   | `DEPLOYMENT_FINGERPRINT_EXPECTED` | 期待するデプロイメント指紋（任意、指定時は一致を必須化） |
    | その他 | `.env.example` 内のコメントを参照 |
 
 ## 実行方法

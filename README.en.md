@@ -52,6 +52,8 @@ npm install        # or pnpm install / yarn install
    |------|------|
    | `DISCORD_TOKEN` | Discord Bot token |
    | `PREFIX` | Prefix for message commands (default: `!`) |
+   | `DEPLOYMENT_FINGERPRINT` | Deployment fingerprint (optional) |
+   | `DEPLOYMENT_FINGERPRINT_EXPECTED` | Expected deployment fingerprint (optional, enforces match when set) |
    | others | See comments in `.env.example` |
 
 ## Usage

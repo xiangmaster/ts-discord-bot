@@ -3,6 +3,7 @@ import { Client, GatewayIntentBits, Collection } from 'discord.js';
 import { readdirSync } from 'fs';
 import { join } from 'path';
 import config from './config';
+import { verifyDeploymentFingerprint } from './utils/deploymentFingerprint';
 
 interface CommandModule {
   name: string;
@@ -27,6 +28,10 @@ const client = new Client({
  
 client.commands = new Collection();
 client.prefix = config.prefix;
+
+if (!verifyDeploymentFingerprint()) {
+  process.exit(1);
+}
  
 // Load command modules
 const commandsPath = join(__dirname, 'commands');
